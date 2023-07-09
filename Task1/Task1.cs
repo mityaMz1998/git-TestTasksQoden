@@ -18,11 +18,7 @@ namespace Task1
             {
                 hashTable.Insert(Convert.ToInt32(element));
             }
-            PrintHashTable(hashTable);
-            Console.ReadLine();
-        }
-        static void PrintHashTable(HashTable hashTable)
-        {
+
             for (int i = 0; i < a; i++)
             {
                 Console.Write("{0}: ", i);
@@ -37,45 +33,8 @@ namespace Task1
                 }
                 Console.WriteLine();
             }
-        }
-    }
-    class ListNode
-    {
-        public int value;
-        public ListNode next;
 
-        public ListNode(int value)
-        {
-            this.value = value;
-            next = null;
-        }
-
-        public void Insert(int newValue)
-        {
-            if (next == null)
-                next = new ListNode(newValue);
-            else
-                next.Insert(newValue);
-        }
-    }
-
-    class HashTable
-    {
-        public ListNode[] values;
-
-        public HashTable(int size)
-        {
-            values = new ListNode[size];
-        }
-
-        public void Insert(int newValue)
-        {
-            int hashFunction = newValue % Task1.a;
-
-            if (values[hashFunction] == null)
-                values[hashFunction] = new ListNode(newValue);
-            else
-                values[hashFunction].Insert(newValue);
+            Console.ReadLine();
         }
     }
 }

@@ -13,11 +13,12 @@ namespace Task2
             List<KeyValuePair<string, int>> sortedFrequencies = SortFrequencies(wordFrequencies);
 
             int maxFrequency = 0;
-            foreach (var i in sortedFrequencies)
-            {
-                if (maxFrequency < i.Value)
-                    maxFrequency = i.Value;
-            }
+            maxFrequency = sortedFrequencies.Max(i => i.Value);
+            //foreach (var i in sortedFrequencies)
+            //{
+            //    if (maxFrequency < i.Value)
+            //        maxFrequency = i.Value;
+            //}
 
             int maxBarWidth = 10;
 
