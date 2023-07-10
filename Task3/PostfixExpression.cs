@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task3
 {
-    class PostfixExpression : IPostfixExpression
+    public class PostfixExpression : IPostfixExpression
     {
         public int CalculatePostfix(string[] expression)
         {
