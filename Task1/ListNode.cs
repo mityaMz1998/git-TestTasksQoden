@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    internal class ListNode
+    class ListNode
     {
+        public int value;
+        public ListNode next;
+
+        public ListNode(int value)
+        {
+            this.value = value;
+            next = null;
+        }
+
+        public void Insert(int newValue)
+        {
+            if (next == null)
+                next = new ListNode(newValue);
+            else
+                next.Insert(newValue);
+        }
     }
 }
