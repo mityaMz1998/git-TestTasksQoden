@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class HashTable
+    public class HashTable
     {
         public ListNode[] values;
 
